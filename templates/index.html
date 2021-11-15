@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <main>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h2 class="py-5">AI Content Generator </h2>
+                </div>
+                <div class="col-12">
+                   
+                    <form method="POST" action="" id="form" class="form-control d-flex justify-content-center align-items-center">
+                       {% csrf_token %}
+                        <p class="mx-3"><b>Text</b>: </p>
+                        <input placeholder="Enter your text phrase" type="text" name="newtext" id="inputBox" class="py-1 mx-3 border px-3"></br>
+                        <button type="submit" id="submit" class="btn btn-primary mx-3">Generate</button>
+                    </form>
+
+                    
+                    
+                </div>
+                <div class="col-2"></div>
+                <div class="col-8">
+                 {% if request.method == "POST" %}
+                    <div class="result p-3 my-5" id="texts">{{re}}</div>
+                {% endif %}
+                    <div class="copy"></div>
+                </div>
+                <!-- <div class="col-2  my-5 p-3">
+                    <button class="btn btn-warning" onclick="CopyToClipboard('texts')">Copy Text</button>
+                    
+                </div> -->
+            </div>
+        </div>
+    </main>
+
+
+
+
+<div class="p-5 m-5"></div>
+<div class="p-5 m-5"></div>
+<div class="p-5 m-5"></div>
+{% endblock content %}
