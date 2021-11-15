@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-x#2_@^t@h*zc^yg6$2=mhuz$ub!$7%#dxy30!h+++yiayxe47x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['content-ai.azurewebsites.net']
+ALLOWED_HOSTS = ['content-ai.herokuapp.com']
 
 
 # Application definition
