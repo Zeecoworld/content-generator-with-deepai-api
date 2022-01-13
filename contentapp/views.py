@@ -9,7 +9,7 @@ def index(request):
     if request.method == "POST":
         r = requests.post("https://api.deepai.org/api/text-generator", 
         data={'text': request.POST["newtext"],}, 
-        headers={'api-key': '2788e9aa-b304-4ee1-8e60-2ce735da77f2'})
+        headers={'api-key': 'XXX'})
         result = r.json()['output']
         re = result.replace("\n", " ")
        
